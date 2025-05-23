@@ -13,10 +13,16 @@ This project initializes UART on an ATmega328P microcontroller to send a byte (`
 - AVR Libc
 - Atmel Studio / Microchip Studio
 
-## Usage
-1. Flash to ATmega328P using ISP programmer
-2. Connect TX to USB-TTL adapter or oscilloscope
-3. Observe `0x02` being sent repeatedly
+## Circuit Connection
+
+| ATmega328P Pin | Connects To       | Description                                                              |
+|----------------|-------------------|--------------------------------------------------------------------------|
+| PD1 (TX)       | USB-TTL RX        | Transmits UART data from the microcontroller to the USB-TTL adapter.     |
+| GND            | USB-TTL GND       | Common ground reference between the microcontroller and USB-TTL adapter. |
+| VCC            | 5V Power Supply   | Powers the ATmega328P (from a regulator or USB-TTL if supported).        |
+
+>  **Note:** Only **TX** and **GND** are required for one-way serial output (sending data from microcontroller to PC). Connect RX (PD0) only if two-way communication is needed.
+
 
 ## License
 MIT License

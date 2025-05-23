@@ -25,4 +25,4 @@ This project initializes UART on an ATmega328P microcontroller to send a byte (`
 
 
 ## License
-**MIT License**
+MIT License
